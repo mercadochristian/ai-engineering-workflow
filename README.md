@@ -15,6 +15,7 @@ My focus is engineering judgment: defining the right problem, giving AI useful b
 | A test failure after a permission change | [Making test preconditions explicit](case-studies/02-explicit-permissions.md) |
 | Keeping work coherent across sessions | [Resuming from a verified checkpoint](case-studies/03-context-continuity.md) |
 | A small example you can run | [Permission fixtures](examples/README.md) |
+| Reusable skills for your own projects | [Shareable engineering skills](skills/README.md) |
 | What AI contributed here | [AI use and evidence](docs/ai-use-and-evidence.md) |
 
 ## The workflow
@@ -62,6 +63,20 @@ The example is original synthetic code illustrating a testing technique. It is n
 - [Repository instructions](AGENTS.md): scoped guidance for AI work in this repository.
 
 These are portable adaptations of practices I use, not an export of my private configuration. For a simple task, a short brief in the conversation may be enough.
+
+## Shareable skills
+
+These three skills turn parts of the workflow into reusable instructions for a coding agent. Each stands on its own and can be adapted to different projects, stacks, and issue trackers.
+
+| Skill | When to use it | What it produces |
+| --- | --- | --- |
+| [Project onboarding](skills/project-onboarding/SKILL.md) | Getting oriented in an unfamiliar repository or refreshing stale context | A source map, relevant development and verification commands, operational effects, and unknowns. |
+| [Behavior verification](skills/behavior-verification/SKILL.md) | Verifying a completed change against its requirements | Results tied to the behavior checked, revision, target, and remaining gaps. |
+| [QA test plan](skills/qa-test-plan/SKILL.md) | Planning manual checks from requirements and an actual diff | Observable scenarios with setup, numbered steps, expected results, and execution status. |
+
+Copy the individual skill folder into the skill location supported by your coding agent, checking for an existing skill with the same name first. You can also read the Markdown and use the procedure directly. See the [usage guide](skills/README.md) for example requests and installation considerations.
+
+The skills contain no private project configuration and require no other skill in this collection. Their structure and documentation have been checked locally; their behavior has not been validated across different coding agents or projects. The synthetic example's test results do not validate the skills.
 
 ## What I'm still improving
 
