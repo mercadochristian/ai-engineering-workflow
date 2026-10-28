@@ -2,11 +2,15 @@
 
 **How I use AI to investigate, implement, review, and verify software—while staying accountable for the result.**
 
-I'm [Christian Mercado](https://github.com/mercadochristian), a software engineer building a practical approach to AI-assisted development. This repository documents practices I've used and revised through real engineering work, including the times the workflow needed correcting.
+I'm [Christian Mercado](https://github.com/mercadochristian), a software engineer documenting practices I've used and revised through real engineering work, including the times the workflow needed correcting.
 
 My focus is engineering judgment: defining the right problem, giving AI useful boundaries, inspecting its output, and knowing what the evidence actually proves.
 
-## Start here
+![Five workflow stages: define, inspect, change, verify, and hand off.](assets/workflow.svg)
+
+Small tasks stay direct. Larger tasks use bounded ownership and one current record. AI helps investigate, draft, test, and review; I own the decisions and authorization.
+
+## Explore
 
 | What to explore | Where to look |
 | --- | --- |
@@ -16,23 +20,11 @@ My focus is engineering judgment: defining the right problem, giving AI useful b
 | Keeping work coherent across sessions | [Resuming from a verified checkpoint](case-studies/03-context-continuity.md) |
 | A small example you can run | [Permission fixtures](examples/README.md) |
 | Reusable skills for your own projects | [Shareable engineering skills](skills/README.md) |
+| Investigating an unknown cause | [Issue investigation](docs/issue-investigation.md) |
+| Evaluating a workflow change | [Skill evaluation](docs/skill-evaluation.md) |
+| Transferring work between tools | [Cross-tool handoffs](docs/cross-tool-handoffs.md) |
+| Measuring outcomes and effort | [Workflow measurement](docs/workflow-measurement.md) |
 | What AI contributed here | [AI use and evidence](docs/ai-use-and-evidence.md) |
-
-## The workflow
-
-```mermaid
-flowchart LR
-    A[Define the outcome] --> B[Inspect the owning source]
-    B --> C[Make a bounded change]
-    C --> D[Verify affected behavior]
-    D --> E[Review decisions and evidence]
-    E --> F[Report results and limits]
-    D -->|Failure or contradiction| B
-```
-
-I handle small tasks directly. For work that benefits from another perspective, I give a specialist bounded ownership and keep consequential review independent of implementation. More agents are not an outcome.
-
-AI helps with investigation, implementation drafts, test design, and review. I own the scope, permissions, design decisions, acceptance criteria, and decision to publish or deploy.
 
 ## What changed through practice
 
@@ -62,31 +54,22 @@ The example is original synthetic code illustrating a testing technique. It is n
 - [Verification report](templates/verification-report.md): checked behavior and honest limits.
 - [Investigation record](templates/investigation-record.md): observations, hypotheses, causal evidence, and remaining uncertainty.
 - [Skill evaluation record](templates/skill-evaluation.md): comparable trials, observed behavior, and a bounded adoption decision.
+- [Tool handoff](templates/tool-handoff.md): ownership, current state, and receiver checks.
+- [Task outcome](templates/task-outcome.md): observed quality, effort, and comparison limits.
+- [Coordination transition](templates/mode-transition.md): retain obligations when tools or coordination change.
 - [Repository instructions](AGENTS.md): scoped guidance for AI work in this repository.
 
 These are portable adaptations of practices I use, not an export of my private configuration. For a simple task, a short brief in the conversation may be enough.
 
-## Shareable skills
+The [skills guide](skills/README.md) covers project onboarding, behavior verification, QA planning, task context, and work updates, with example requests and installation guidance. These standalone instructions have been checked structurally; their behavior across different agents and projects remains unverified.
 
-These three skills turn parts of the workflow into reusable instructions for a coding agent. Each stands on its own and can be adapted to different projects, stacks, and issue trackers.
-
-| Skill | When to use it | What it produces |
-| --- | --- | --- |
-| [Project onboarding](skills/project-onboarding/SKILL.md) | Getting oriented in an unfamiliar repository or refreshing stale context | A source map, relevant development and verification commands, operational effects, and unknowns. |
-| [Behavior verification](skills/behavior-verification/SKILL.md) | Verifying a completed change against its requirements | Results tied to the behavior checked, revision, target, and remaining gaps. |
-| [QA test plan](skills/qa-test-plan/SKILL.md) | Planning manual checks from requirements and an actual diff | Observable scenarios with setup, numbered steps, expected results, and execution status. |
-
-Copy the individual skill folder into the skill location supported by your coding agent, checking for an existing skill with the same name first. You can also read the Markdown and use the procedure directly. See the [usage guide](skills/README.md) for example requests and installation considerations.
-
-The skills contain no private project configuration and require no other skill in this collection. Their structure and documentation have been checked locally; their behavior has not been validated across different coding agents or projects. The synthetic example's test results do not validate the skills.
+Optional guides cover [coordination](docs/execution-modes.md) and [scheduling when local performance is a constraint](docs/resource-aware-execution.md). These describe proposed procedures, not measured improvements or installed controls.
 
 ## What I'm still improving
 
 I'm developing a habit of evaluating AI workflows through observable results. I do not have a controlled before/after study establishing productivity, token, or cost savings. I also don't treat a long instruction file or a model name as proof of engineering quality.
 
-Two proposed guides make the next steps concrete: [investigating an unknown cause](docs/issue-investigation.md) and [evaluating a skill through behavior](docs/skill-evaluation.md). They include blank records and a synthetic investigation example, not completed evaluation results.
-
-My [learning log](docs/learning-log.md) separates adopted practices from planned experiments. This repository is a record of applied learning, not a claim to cover every new AI tool or research development.
+My [learning log](docs/learning-log.md) separates adopted practices from planned experiments. The [candidate skills](docs/skill-candidates.md) are future ideas, not implemented capabilities. This repository is a record of applied learning, not a claim to cover every new AI tool or research development.
 
 ## Privacy
 

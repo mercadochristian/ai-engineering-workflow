@@ -26,12 +26,21 @@ and distinguish reproducing a symptom from establishing its cause. Use the
 [investigation record](../templates/investigation-record.md) when durable private
 notes will help.
 
-## 3. Choose a bounded implementation path
+## 3. Make a bounded change
 
 Handle a focused task directly. For separate implementation surfaces or a useful
 independent perspective, assign a specialist clear ownership, allowed actions,
 requirements, evidence, and a deliverable. Avoid overlapping writers and nested
 coordination. Keep the existing dependencies when they are sufficient.
+
+Use the conversation for a small task. When work needs a durable record, keep
+scope, decisions, evidence, and next action together in one private checkpoint;
+link existing plans or logs instead of copying them into parallel status files.
+Use only the template sections the task needs. A specialist should resolve a
+specific uncertainty or own a separate deliverable.
+
+The [coordination guide](execution-modes.md) describes reviewable slices and how
+to change coordination while retaining task obligations.
 
 For consequential changes, inspect failure and recovery behavior before editing
 and obtain independent review when available. Disclose when that review is missing.
@@ -57,6 +66,14 @@ environment instead of weakening an expected outcome to get a green run. Compare
 with an unchanged base under comparable conditions before calling a failure
 pre-existing. Rerun affected checks after relevant changes.
 
+Reuse a passing result while its relevant source, setup, and target remain
+unchanged. Rerun checks whose inputs changed and preserve required repository
+checks; repeated unchanged runs do not add coverage.
+
+When a performance issue affects execution, the optional
+[scheduling guide](resource-aware-execution.md) describes how to adjust
+concurrency while preserving required checks and service dependencies.
+
 ## 5. Reconcile and hand off
 
 Compare the final diff with the requested behavior, affected callers, and test
@@ -66,8 +83,10 @@ separate authorized action.
 
 For work that spans sessions, update one private checkpoint with current state and
 the next action. On resume, verify the branch, files, and evidence before relying
-on it. A [checkpoint template](../templates/checkpoint.md) is a memory aid, not a
-substitute for inspection.
+on it. The [checkpoint template](../templates/checkpoint.md) supports that record.
+Summarize the outcome in the handoff and link the evidence already recorded.
+For transfer to another coding tool, use the [handoff guide](cross-tool-handoffs.md)
+and its receiver checks.
 
 ## Evaluate a workflow change
 
@@ -78,3 +97,7 @@ missing prerequisites, conflicting evidence and interruption. The
 [evaluation record](../templates/skill-evaluation.md) describe a proposed method;
 they do not establish that an evaluation has been performed or that the workflow
 improves productivity.
+
+The [measurement guide](workflow-measurement.md) and
+[task outcome record](../templates/task-outcome.md) describe how to collect
+quality and effort observations before making efficiency claims.

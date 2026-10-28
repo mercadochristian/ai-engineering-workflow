@@ -1,6 +1,6 @@
 # Shareable engineering skills
 
-Three standalone, product-neutral adaptations of engineering workflows. They do
+Five standalone, product-neutral adaptations of engineering workflows. They do
 not require a particular issue tracker, application stack, agent team, or another
 skill in this collection.
 
@@ -9,6 +9,8 @@ skill in this collection.
 | [Project onboarding](project-onboarding/SKILL.md) | Finding owning sources, development commands, and verification boundaries | Use $project-onboarding to map this repository for an upcoming API change. |
 | [Behavior verification](behavior-verification/SKILL.md) | Checking changed behavior and reporting evidence and gaps | Use $behavior-verification to verify this change against its acceptance criteria on the isolated local test target. |
 | [QA test plan](qa-test-plan/SKILL.md) | Creating manual scenarios or reconciling supplied results against a plan | Use $qa-test-plan to draft a manual plan from this issue and diff. |
+| [Work context brief](work-context-brief/SKILL.md) | Reconstructing supported task state, decisions and pending work | Use $work-context-brief to check whether this proposed action happened and identify the next supported step. |
+| [Work update](work-update/SKILL.md) | Drafting progress, blocker or handoff updates from evidence | Use $work-update to summarize these results with failed and unrun coverage visible. |
 
 ## Use the skills
 
@@ -26,3 +28,7 @@ skill does not authorize testing, setup, publication, or other external actions.
 These are portable adaptations, not exports of private configuration. Static
 validation checks structure and portability; it does not establish behavioral
 quality across different projects or coding agents.
+
+Use the [evaluation guide](../docs/skill-evaluation.md) for representative trials.
+The [candidate list](../docs/skill-candidates.md) describes future ideas separately
+from the five included skills.
