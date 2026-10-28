@@ -60,6 +60,8 @@ The example is original synthetic code illustrating a testing technique. It is n
 - [Task brief](templates/task-brief.md): outcome, scope, ownership, and acceptance criteria.
 - [Checkpoint](templates/checkpoint.md): current state, evidence, blockers, and next action.
 - [Verification report](templates/verification-report.md): checked behavior and honest limits.
+- [Investigation record](templates/investigation-record.md): observations, hypotheses, causal evidence, and remaining uncertainty.
+- [Skill evaluation record](templates/skill-evaluation.md): comparable trials, observed behavior, and a bounded adoption decision.
 - [Repository instructions](AGENTS.md): scoped guidance for AI work in this repository.
 
 These are portable adaptations of practices I use, not an export of my private configuration. For a simple task, a short brief in the conversation may be enough.
@@ -81,6 +83,8 @@ The skills contain no private project configuration and require no other skill i
 ## What I'm still improving
 
 I'm developing a habit of evaluating AI workflows through observable results. I do not have a controlled before/after study establishing productivity, token, or cost savings. I also don't treat a long instruction file or a model name as proof of engineering quality.
+
+Two proposed guides make the next steps concrete: [investigating an unknown cause](docs/issue-investigation.md) and [evaluating a skill through behavior](docs/skill-evaluation.md). They include blank records and a synthetic investigation example, not completed evaluation results.
 
 My [learning log](docs/learning-log.md) separates adopted practices from planned experiments. This repository is a record of applied learning, not a claim to cover every new AI tool or research development.
 

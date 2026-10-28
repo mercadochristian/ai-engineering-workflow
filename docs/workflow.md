@@ -20,7 +20,11 @@ use it to orient the investigation, then verify against current source. A stale
 index or a prior conversation is a lead, not runtime evidence.
 
 For a bug, identify the trigger and failure mechanism. If the original user
-sequence is unknown, say so rather than inventing a reproduction.
+sequence is unknown, say so rather than inventing a reproduction. The
+[investigation guide](issue-investigation.md) explains how to compare hypotheses
+and distinguish reproducing a symptom from establishing its cause. Use the
+[investigation record](../templates/investigation-record.md) when durable private
+notes will help.
 
 ## 3. Choose a bounded implementation path
 
@@ -64,3 +68,13 @@ For work that spans sessions, update one private checkpoint with current state a
 the next action. On resume, verify the branch, files, and evidence before relying
 on it. A [checkpoint template](../templates/checkpoint.md) is a memory aid, not a
 substitute for inspection.
+
+## Evaluate a workflow change
+
+Before adopting a new or revised skill, define the behavior it should improve and
+the requirements it must preserve. Compare representative cases, including
+missing prerequisites, conflicting evidence and interruption. The
+[skill evaluation guide](skill-evaluation.md) and
+[evaluation record](../templates/skill-evaluation.md) describe a proposed method;
+they do not establish that an evaluation has been performed or that the workflow
+improves productivity.
