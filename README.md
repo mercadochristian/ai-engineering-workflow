@@ -61,7 +61,7 @@ The example is original synthetic code illustrating a testing technique. It is n
 
 These are portable adaptations of practices I use, not an export of my private configuration. For a simple task, a short brief in the conversation may be enough.
 
-The [skills guide](skills/README.md) covers project onboarding, behavior verification, QA planning, task context, and work updates, with example requests and installation guidance. These standalone instructions have been checked structurally; their behavior across different agents and projects remains unverified.
+The [skills guide](skills/README.md) shows how to install the standalone skills in Codex and Claude Code. It includes example requests for project onboarding, issue investigation, behavior verification, QA planning, task context, and work updates. Cross-tool behavior still needs testing.
 
 Optional guides cover [coordination](docs/execution-modes.md) and [scheduling when local performance is a constraint](docs/resource-aware-execution.md). These describe proposed procedures, not measured improvements or installed controls.
 

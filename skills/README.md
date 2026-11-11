@@ -1,34 +1,47 @@
 # Shareable engineering skills
 
-Five standalone, product-neutral adaptations of engineering workflows. They do
-not require a particular issue tracker, application stack, agent team, or another
-skill in this collection.
+Standalone engineering workflows for different projects and tech stacks. Each
+skill uses the target project's instructions, available tools, and evidence.
 
 | Skill | Use it for | Example request |
 | --- | --- | --- |
-| [Project onboarding](project-onboarding/SKILL.md) | Finding owning sources, development commands, and verification boundaries | Use $project-onboarding to map this repository for an upcoming API change. |
-| [Behavior verification](behavior-verification/SKILL.md) | Checking changed behavior and reporting evidence and gaps | Use $behavior-verification to verify this change against its acceptance criteria on the isolated local test target. |
-| [QA test plan](qa-test-plan/SKILL.md) | Creating manual scenarios or reconciling supplied results against a plan | Use $qa-test-plan to draft a manual plan from this issue and diff. |
-| [Work context brief](work-context-brief/SKILL.md) | Reconstructing supported task state, decisions and pending work | Use $work-context-brief to check whether this proposed action happened and identify the next supported step. |
-| [Work update](work-update/SKILL.md) | Drafting progress, blocker or handoff updates from evidence | Use $work-update to summarize these results with failed and unrun coverage visible. |
+| [Project onboarding](project-onboarding/SKILL.md) | Finding owning sources, development commands, and verification boundaries | Map this repository for an upcoming API change. |
+| [Issue investigation](issue-investigation/SKILL.md) | Tracing a reported bug to a supported cause or a focused next check | Investigate why saving this form hangs. Keep the first pass read-only. |
+| [Behavior verification](behavior-verification/SKILL.md) | Checking changed behavior and reporting evidence and gaps | Verify this change against its acceptance criteria on the isolated local test target. |
+| [QA test plan](qa-test-plan/SKILL.md) | Creating manual scenarios or reconciling supplied results against a plan | Draft a manual QA plan from this issue and diff. |
+| [Work context brief](work-context-brief/SKILL.md) | Reconstructing supported task state, decisions and pending work | Check whether this proposed action happened and identify the next supported step. |
+| [Work update](work-update/SKILL.md) | Drafting progress, blocker or handoff updates from evidence | Summarize these results with failed and unrun coverage visible. |
 
-## Use the skills
+## Install in Codex or Claude Code
 
-Copy an individual skill folder, including its `SKILL.md`, into the skill location
-supported by your coding agent. Follow that environment's installation and
-discovery instructions. Keep each skill in its own folder and inspect any existing
-folder with the same name before copying; do not overwrite a customized skill.
-No installation script, third-party package, or external service is required by
-the skill files themselves. Actual project checks may have their own prerequisites.
+1. Clone or download this repository and choose a folder under `skills/`, such
+   as `skills/issue-investigation/`.
+2. From the root of the project where you want to use it, create the skills
+   directory for your tool. Copy the entire chosen folder into that directory,
+   including `SKILL.md`. If a folder with that name already exists, compare it
+   with your copy before updating it.
+3. Open a new session in the target project and invoke the skill with your task.
+   The examples below use `issue-investigation`. For another skill, substitute
+   its folder name and the relevant request from the table above.
 
-You can also read the Markdown directly and adapt the procedure to your workflow.
-Repository requirements and the user's authorized scope still apply. Installing a
-skill does not authorize testing, setup, publication, or other external actions.
+| Tool | Installed file relative to the project root | Example prompt |
+| --- | --- | --- |
+| Codex | `.agents/skills/issue-investigation/SKILL.md` | `$issue-investigation Investigate why saving this form hangs. Keep the first pass read-only.` |
+| Claude Code | `.claude/skills/issue-investigation/SKILL.md` | `/issue-investigation Investigate why saving this form hangs. Keep the first pass read-only.` |
+
+For personal use across local projects, copy the folder into `~/.agents/skills/`
+for Codex or `~/.claude/skills/` for Claude Code. See the
+[Codex skills documentation](https://developers.openai.com/codex/skills) and
+[Claude Code skills documentation](https://code.claude.com/docs/en/skills).
+
+The folders use the [Agent Skills format](https://agentskills.io/specification).
+You can also open a `SKILL.md` directly and follow its procedure. The skill files
+require no installer or dependencies. Any project checks you run use the target
+project's own prerequisites and the scope authorized for the task.
 
 These are portable adaptations, not exports of private configuration. Static
 validation checks structure and portability; it does not establish behavioral
 quality across different projects or coding agents.
 
 Use the [evaluation guide](../docs/skill-evaluation.md) for representative trials.
-The [candidate list](../docs/skill-candidates.md) describes future ideas separately
-from the five included skills.
+The [candidate list](../docs/skill-candidates.md) describes future ideas.

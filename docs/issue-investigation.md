@@ -5,6 +5,10 @@ does not need to identify the faulty component or propose a fix first. The
 published workflow already calls for establishing the trigger and mechanism;
 this guide makes that work easier to perform and review.
 
+To run this workflow with a coding assistant, install the standalone
+[issue investigation skill](../skills/issue-investigation/SKILL.md) using the
+[Codex or Claude Code instructions](../skills/README.md#install-in-codex-or-claude-code).
+
 This AI-assisted guide proposes a reusable procedure. The example below is
 synthetic; it is not an incident report or evidence of a confirmed diagnosis.
 See [AI use and evidence](ai-use-and-evidence.md) for the repository's evidence
