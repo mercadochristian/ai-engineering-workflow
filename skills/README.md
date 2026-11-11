@@ -44,4 +44,7 @@ validation checks structure and portability; it does not establish behavioral
 quality across different projects or coding agents.
 
 Use the [evaluation guide](../docs/skill-evaluation.md) for representative trials.
+The [cross-tool walkthrough](../docs/cross-tool-walkthrough.md) shows how to try
+issue investigation and behavior verification on the same synthetic task and
+records the observed results.
 The [candidate list](../docs/skill-candidates.md) describes future ideas.

@@ -20,6 +20,7 @@ Small tasks stay direct. Larger tasks use bounded ownership and one current reco
 | Keeping work coherent across sessions | [Resuming from a verified checkpoint](case-studies/03-context-continuity.md) |
 | A small example you can run | [Permission fixtures](examples/README.md) |
 | Reusable skills for your own projects | [Shareable engineering skills](skills/README.md) |
+| Trying the same task in Codex and Claude Code | [Cross-tool skill walkthrough](docs/cross-tool-walkthrough.md) |
 | Investigating an unknown cause | [Issue investigation](docs/issue-investigation.md) |
 | Evaluating a workflow change | [Skill evaluation](docs/skill-evaluation.md) |
 | Transferring work between tools | [Cross-tool handoffs](docs/cross-tool-handoffs.md) |
@@ -61,7 +62,7 @@ The example is original synthetic code illustrating a testing technique. It is n
 
 These are portable adaptations of practices I use, not an export of my private configuration. For a simple task, a short brief in the conversation may be enough.
 
-The [skills guide](skills/README.md) shows how to install the standalone skills in Codex and Claude Code. It includes example requests for project onboarding, issue investigation, behavior verification, QA planning, task context, and work updates. Cross-tool behavior still needs testing.
+The [skills guide](skills/README.md) shows how to install the standalone skills in Codex and Claude Code. It includes example requests for project onboarding, issue investigation, behavior verification, QA planning, task context, and work updates. The [cross-tool walkthrough](docs/cross-tool-walkthrough.md) records the first synthetic trial and the remaining Claude Code checks.
 
 Optional guides cover [coordination](docs/execution-modes.md) and [scheduling when local performance is a constraint](docs/resource-aware-execution.md). These describe proposed procedures, not measured improvements or installed controls.
 
