@@ -15,6 +15,7 @@ Small tasks stay direct. Larger tasks use bounded ownership and one current reco
 | What to explore | Where to look |
 | --- | --- |
 | How I approach a task | [Engineering workflow](docs/workflow.md) |
+| How Lauren Tan's talk shaped risk-based review and verification | [From “All Code Is Slop (Except Mine)” to a leaner workflow](docs/lauren-tan-workflow-takeaways.md) |
 | A verification mistake and the correction | [Checking the actual caller](case-studies/01-verification-boundaries.md) |
 | A test failure after a permission change | [Making test preconditions explicit](case-studies/02-explicit-permissions.md) |
 | Keeping work coherent across sessions | [Resuming from a verified checkpoint](case-studies/03-context-continuity.md) |
@@ -34,6 +35,7 @@ Small tasks stay direct. Larger tasks use bounded ownership and one current reco
 - **Keep one checkpoint per task.** Resume by checking current source and working-tree state, then update the same checkpoint.
 - **Separate evidence boundaries.** A unit test, an HTTP response, a browser interaction, and a deployed integration prove different things.
 - **Keep uncertainty visible.** A blocked integration remains blocked even when local checks pass.
+- **Match process to risk.** Keep small changes direct, add independent review where the changed boundary warrants it, and prefer executable safeguards over more standing prose.
 
 The case studies explain these lessons without publishing private project details. They are retrospective accounts, not independently auditable production artifacts.
 
@@ -58,6 +60,7 @@ The example is original synthetic code illustrating a testing technique. It is n
 - [Tool handoff](templates/tool-handoff.md): ownership, current state, and receiver checks.
 - [Task outcome](templates/task-outcome.md): observed quality, effort, and comparison limits.
 - [Coordination transition](templates/mode-transition.md): retain obligations when tools or coordination change.
+- [Portable risk-based Codex workflow](templates/codex-team-workflow.md): proportional Dev, QA, review, verification, and learning guidance.
 - [Repository instructions](AGENTS.md): scoped guidance for AI work in this repository.
 
 These are portable adaptations of practices I use, not an export of my private configuration. For a simple task, a short brief in the conversation may be enough.

@@ -9,6 +9,7 @@ to evaluate. It is not a chronological training record or a productivity study.
 | Success tests inherited permissions that were no longer defaults | Establish permission setup in the intended test and retain denial controls | Historical private account; a synthetic version is runnable here |
 | Long tasks needed reliable resumption | Reuse one checkpoint and verify source state before continuing | Template and instruction checks do not measure resumption quality |
 | More coordination and instructions did not guarantee trustworthy output | Keep focused tasks direct and use bounded specialists where useful | A working practice, not a measured efficiency claim |
+| Lauren Tan's talk prompted a review of fixed workflow ceremony | Route definition and independent review by risk; prefer executable safeguards before adding prose | Synthetic routing checks, independent static review, and one successful Low-risk setup task; not a productivity or defect-rate study |
 
 ## Next experiments
 

@@ -3,6 +3,10 @@
 Standalone engineering workflows for different projects and tech stacks. Each
 skill uses the target project's instructions, available tools, and evidence.
 
+For choosing how much planning, verification, and independent review a task
+needs, see the [engineering workflow](../docs/workflow.md) and the
+[portable Codex workflow template](../templates/codex-team-workflow.md).
+
 | Skill | Use it for | Example request |
 | --- | --- | --- |
 | [Project onboarding](project-onboarding/SKILL.md) | Finding owning sources, development commands, and verification boundaries | Map this repository for an upcoming API change. |

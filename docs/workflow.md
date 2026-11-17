@@ -33,6 +33,15 @@ independent perspective, assign a specialist clear ownership, allowed actions,
 requirements, evidence, and a deliverable. Avoid overlapping writers and nested
 coordination. Keep the existing dependencies when they are sufficient.
 
+Match definition and review effort to the changed behavior rather than the ticket
+label or line count. A clear, localized change with minor bounded risk can stay
+direct. Ordinary feature and bug work with meaningful regression risk benefits
+from a concise reviewed spec and one independent behavior/maintainability review.
+Authorization, sensitive data, migration, broad contracts, difficult recovery,
+or a material UI journey need deeper definition and the independent perspectives
+implicated by those boundaries. Security and UI/UX reviews are conditional, not
+default ceremony.
+
 Use the conversation for a small task. When work needs a durable record, keep
 scope, decisions, evidence, and next action together in one private checkpoint;
 link existing plans or logs instead of copying them into parallel status files.
@@ -69,6 +78,19 @@ pre-existing. Rerun affected checks after relevant changes.
 Reuse a passing result while its relevant source, setup, and target remain
 unchanged. Rerun checks whose inputs changed and preserve required repository
 checks; repeated unchanged runs do not add coverage.
+
+### Prefer executable prevention
+
+For a severe or repeated failure whose safeguards are absent or ineffective, fix
+and verify the current task first. Then prefer the smallest compatible prevention
+mechanism in the owning system: a clearer API or architecture, an enforceable type
+or schema, a dependency or static rule, or a focused automated/runtime test. Use
+prose for judgment and limits that executable checks cannot establish. Preserve
+legitimate cases and keep a proposal provisional when causal evidence is missing.
+
+This preference does not authorize a broad refactor or a new project convention.
+The repository's requirements and established architecture remain authoritative.
+See [how Lauren Tan's talk informed this revision](lauren-tan-workflow-takeaways.md).
 
 When a performance issue affects execution, the optional
 [scheduling guide](resource-aware-execution.md) describes how to adjust
