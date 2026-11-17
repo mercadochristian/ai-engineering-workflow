@@ -14,6 +14,13 @@ difference between a historical account, a reusable template, and executable evi
 - Do not invent measurements, test results, source citations, or employer outcomes.
 - Distinguish local checks, real caller behavior, and deployed behavior.
 
+## Workflow names and visuals
+
+Use Beans as the name of the main orchestrator. Use the coffee names from the
+[role guide](templates/codex-team-workflow.md#roles) when describing specialists.
+For slides and walkthroughs, Beans is also the mascot. Reuse an existing
+expression from the [Beans asset guide](assets/README.md) that fits the moment.
+
 ## Privacy and authority
 
 - Follow docs/privacy.md. Do not copy employer code, configuration, logs,

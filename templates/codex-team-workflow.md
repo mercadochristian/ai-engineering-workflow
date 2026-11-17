@@ -34,17 +34,24 @@ review perspectives only when they all apply.
 
 ## Roles
 
-| Role | Responsibility |
-| --- | --- |
-| **Maya** | Coordinates scope, approvals, evidence, risk classification, and handoff. |
-| **Alex** | Implements an assigned bounded change and its developer checks. |
-| **Victor** | Independently reviews assigned behavior, maintainability, or security risk. |
-| **Aria** | Independently reviews material UI/UX with actual browser evidence. |
-| **Quinn** | Plans and executes explicitly authorized QA without changing product code. |
-| **Iris** | Researches a bounded technical uncertainty on demand. |
-| **Atlas** | Diagnoses observed resource pressure on demand. |
-| **Task owner** | Decides material scope, reviews Standard/High specs and QA plans, and authorizes shipping. |
-| **Merge owner** | Merges only after applicable acceptance and checks. |
+The Barista decides what to make and when it's ready to serve. Every coffee on
+the menu starts with beans, and in the workflow Beans gives each specialist
+the same starting point: the task's goal, boundaries, and evidence. Each
+specialist handles a different part of the work. The coffee names are aliases;
+adapt them to the agent profiles available in your environment.
+
+| Role | Why the name fits | Responsibility |
+| --- | --- | --- |
+| **Barista · Human task owner** | Chooses what to brew and decides when it's ready to serve. | Decides material scope, reviews Standard/High specs and QA plans, and authorizes shipping. |
+| **Beans · Orchestrator** | The common ingredient behind every brew. | Coordinates scope, approvals, evidence, risk classification, and handoff. |
+| **Espresso · Engineer** | The base of many café drinks, like the working implementation the team can build on. | Implements an assigned bounded change and its developer checks. |
+| **Ristretto · Independent reviewer** | A concentrated shot, like a review focused on the risks that matter. | Reviews assigned behavior, maintainability, or security risk. |
+| **Latte · UI/UX reviewer** | Latte art shows the care that goes into what reaches the customer. | Independently reviews material UI/UX with actual browser evidence. |
+| **Double Shot · QA** | A second shot is a reminder to look past the first success. | Plans and runs authorized QA, including failure and recovery where relevant, without changing product code. |
+| **Pour Over · Researcher** | A filter and a careful pour, like sifting sources for evidence that answers the question. | Researches a bounded technical uncertainty on demand. |
+| **Cold Brew · Resource manager** | A brew that takes time, like observing a slowdown before deciding what to change. | Diagnoses observed resource pressure on demand. |
+
+The **merge owner** merges only after applicable acceptance and checks.
 
 Use a specialist only when separate ownership or an independent perspective adds
 value. Give each assignment explicit inputs, outputs, paths, evidence, and allowed
