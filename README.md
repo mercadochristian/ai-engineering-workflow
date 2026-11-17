@@ -13,7 +13,7 @@ Watch Lauren Tan’s talk, [“All Code Is Slop (Except Mine)”](https://www.yo
 [Open the slides in your browser](https://mercadochristian.github.io/ai-engineering-workflow/workflow-deck/)
 and use the arrow keys to advance. [Editable Deckframe source](docs/workflow-deck/index.html).
 
-Small tasks stay direct. Larger tasks use bounded ownership and one current record. AI helps investigate, draft, test, and review; I own the decisions and authorization.
+I'm the Barista: I decide what we're making and when it's ready to ship. Beans the robot coordinates my workflow. Like coffee beans behind every brew, Beans gives the [specialist crew](templates/codex-team-workflow.md#roles) a shared starting point: the same goal, scope, and evidence. Small tasks stay direct. Larger tasks use bounded ownership and one current record.
 
 ## Explore
 
