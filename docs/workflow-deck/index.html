@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Lauren Tan shaped my AI engineering workflow</title>
+<link rel="stylesheet" href="deckframe.css">
+<script src="deckframe.js" defer></script>
+<style>
+:root {color-scheme:dark; --shell:#181a20; --paper:#fbf8ed; --ink:#141931; --rail:#14193138}
+* {box-sizing:border-box}
+body {margin:0; background:var(--shell); color:var(--paper); font:16px system-ui,sans-serif}
+main {width:min(100% - 32px,1120px); margin:clamp(16px,4vh,42px) auto}
+[data-deckframe] {--df-aspect:16 / 7; --df-radius:16px}
+[data-stage] {container-type:inline-size}
+[data-slide] {background:var(--paper); color:var(--ink); display:grid; align-content:center; padding:3.5cqw 8cqw calc(5cqw + 55px); position:relative; min-height:320px}
+[data-deckframe]:not([data-deckframe-ready]) [data-slide] {margin-bottom:16px;border-radius:16px}
+.copy {width:100%; max-width:830px; margin-inline:auto}
+h1,h2 {font-size:clamp(36px,6.6cqw,76px); font-weight:730; line-height:.98; letter-spacing:-.038em; margin:0 0 .32em; text-wrap:balance}
+.eyebrow {font-size:clamp(12px,1.36cqw,15px); font-weight:750; letter-spacing:.075em; margin:0 0 .9em; text-transform:uppercase}
+p,dd,blockquote {line-height:1.37}
+.lead {font-size:clamp(16px,2.2cqw,24px); margin:.65em 0; max-width:40ch}
+.small,dd {font-size:clamp(15px,1.8cqw,20px)}
+.small {margin:.65em 0; max-width:48ch}
+dl {margin:.8em 0 .55em}
+dl div {display:grid;grid-template-columns:5.3em 1fr; gap:10px; margin-bottom:.52em}
+dt {font-size:clamp(14px,1.7cqw,19px); font-weight:750}
+dd {margin:0}
+blockquote {font-size:clamp(15px,1.84cqw,20px);margin:.75em 0; max-width:54ch; padding-left:.7em; border-left:3px solid #315baf}
+.source {font-size:clamp(13px,1.4cqw,16px);margin:.8em 0 0}
+.source a {color:inherit;text-underline-offset:.18em}
+/* The robot matches across slides. The five stops keep its path visible with reduced motion. */
+.journey {position:absolute; inset:auto 8cqw 2.5cqw; height:74px; pointer-events:none}
+.stops {position:absolute; inset:auto 0 0; height:14px; display:flex; justify-content:space-between; align-items:center}
+.stops::before {content:""; position:absolute; inset:calc(50% - .5px) 0 auto; border-top:1px solid var(--rail)}
+.stops span {position:relative; width:7px; height:7px; border-radius:50%; background:var(--ink); opacity:.28}
+.stops span.current {width:10px; height:10px; opacity:1}
+.mascot {position:absolute; left:var(--stop); bottom:14px; width:clamp(44px,6cqw,68px); transform:translateX(-50%); margin:0}
+.mascot svg {display:block; width:100%; height:auto; overflow:visible}
+.cover {background:#e5ebff; --robot:#9af0d0; --stop:0%}
+.levels {--robot:#a7bfff; --stop:25%}
+.bug {background:#f9e2d8; --robot:#ffc379; --stop:50%}
+.method {background:#e4f1ed; --robot:#8fe3c8; --stop:75%}
+.trial {background:#eae1fa; --robot:#c9a9fc; --stop:100%}
+footer,nav {display:flex;align-items:center;gap:7px}
+footer {margin-top:12px;flex-wrap:wrap}
+nav {margin-right:auto}
+button {cursor:pointer;min-height:40px;padding:0 11px;border:1px solid #5c6273;border-radius:8px;background:#252936;color:#fff;font:inherit}
+button[aria-current] {background:#e5ebff;color:#141931;border-color:#e5ebff;font-weight:700}
+button:disabled {opacity:.55;cursor:default}
+button:focus-visible,a:focus-visible {outline:3px solid #4b79e0;outline-offset:3px}
+@media(max-width:760px) {
+  [data-deckframe] {--df-aspect:auto}
+  [data-deckframe-ready] [data-slide] {position:relative}
+  [data-slide] {min-height:0;padding:22px 24px 86px}
+  [data-deckframe-ready] [data-slide] {min-height:350px}
+  h1,h2 {font-size:clamp(36px,10cqw,55px)}
+  .journey {inset:auto 30px 14px}
+  button {min-width:35px;padding:0 7px;font-size:14px}
+}
+@media print {
+  :root {color-scheme:light}
+  body {background:#fff}
+  main {width:100%;margin:0}
+  [data-deckframe-ready] [data-stage] {aspect-ratio:auto;overflow:visible}
+  [data-deckframe-ready] [data-slide], [data-deckframe] [data-slide][hidden] {display:grid!important;position:relative;min-height:135mm;break-after:page;print-color-adjust:exact}
+  [data-deckframe] [data-step][hidden] {display:block!important}
+  [data-controls] {display:none!important}
+}
+</style>
+</head>
+<body>
+<main data-deckframe aria-label="How Lauren Tan shaped my AI engineering workflow">
+<div data-stage aria-label="Presentation">
+<section data-slide data-transition="fade" class="cover" aria-labelledby="title-1">
+  <div class="copy">
+    <p class="eyebrow">Inspired by Lauren Tan</p>
+    <h1 id="title-1">How the workflow got lighter.</h1>
+    <p class='lead'>Lauren Tan’s talk made me ask which parts of my workflow actually help me catch mistakes.</p>
+    <p class='source'><a href='https://www.youtube.com/watch?v=O_zcc6Xl12g'>Watch All Code Is Slop (Except Mine)</a></p>
+  </div>
+  <div class="journey" aria-hidden="true">
+    <div class="stops"><span class="current"></span><span></span><span></span><span></span><span></span></div>
+    <div class="mascot" data-morph="robot">
+      <svg viewBox="0 0 64 64" focusable="false">
+        <path d="M32 22V13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        <circle cx="32" cy="9" r="4" fill="var(--robot)" stroke="currentColor" stroke-width="2.8"/>
+        <path d="M8 45c0-12 9-23 23-23 13 0 25 10 25 23 0 10-8 14-15 13-5-.7-7-2-11-1-4 1-6 3-12 2C11 58 8 52 8 45Z" fill="var(--robot)" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+        <g fill="currentColor"><circle cx="27" cy="39" r="2.4"/><circle cx="39" cy="39" r="2.4"/></g>
+        <path d="M29 46q3 4 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<section data-slide data-transition="fade" class="levels" aria-labelledby="title-2">
+  <div class="copy">
+    <p class="eyebrow">Plan and review by risk</p>
+    <h2 id="title-2">Pick a route.</h2>
+    <dl><div><dt>Low</dt><dd>Brief scope and focused checks.</dd></div><div><dt>Standard</dt><dd>Reviewed spec and independent review.</dd></div><div><dt>High</dt><dd>Detailed spec and review of affected boundaries.</dd></div></dl>
+  </div>
+  <div class="journey" aria-hidden="true">
+    <div class="stops"><span></span><span class="current"></span><span></span><span></span><span></span></div>
+    <div class="mascot" data-morph="robot">
+      <svg viewBox="0 0 64 64" focusable="false">
+        <path d="M32 22V13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        <circle cx="32" cy="9" r="4" fill="var(--robot)" stroke="currentColor" stroke-width="2.8"/>
+        <path d="M8 45c0-12 9-23 23-23 13 0 25 10 25 23 0 10-8 14-15 13-5-.7-7-2-11-1-4 1-6 3-12 2C11 58 8 52 8 45Z" fill="var(--robot)" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+        <g fill="currentColor"><circle cx="29" cy="39" r="2.4"/><circle cx="41" cy="39" r="2.4"/></g>
+        <path d="M29 46q3 4 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<section data-slide data-transition="fade" class="bug" aria-labelledby="title-3">
+  <div class="copy">
+    <p class="eyebrow">Prevent repeat failures</p>
+    <h2 id="title-3">Put the rule in the code.</h2>
+    <p class='lead'>When a serious mistake can recur, look for the smallest safeguard that catches it.</p>
+    <p class='small'>A type, a schema constraint, or a focused test can catch a mistake the next time it happens.</p>
+  </div>
+  <div class="journey" aria-hidden="true">
+    <div class="stops"><span></span><span></span><span class="current"></span><span></span><span></span></div>
+    <div class="mascot" data-morph="robot">
+      <svg viewBox="0 0 64 64" focusable="false">
+        <path d="M32 22V13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        <circle cx="32" cy="9" r="4" fill="var(--robot)" stroke="currentColor" stroke-width="2.8"/>
+        <path d="M8 45c0-12 9-23 23-23 13 0 25 10 25 23 0 10-8 14-15 13-5-.7-7-2-11-1-4 1-6 3-12 2C11 58 8 52 8 45Z" fill="var(--robot)" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+        <g fill="currentColor"><rect x="24" y="36" width="5" height="5" rx="1.5"/><rect x="36" y="36" width="5" height="5" rx="1.5"/></g>
+        <path d="M29 46q3 4 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<section data-slide data-transition="fade" class="method" aria-labelledby="title-4">
+  <div class="copy">
+    <p class="eyebrow">Verify the real behavior</p>
+    <h2 id="title-4">Ride the whole route.</h2>
+    <p class='lead'>Follow the change through the code that actually uses it.</p>
+    <blockquote data-step>For a Save fix, check what the form sent, what was stored, and what the user saw.</blockquote>
+  </div>
+  <div class="journey" aria-hidden="true">
+    <div class="stops"><span></span><span></span><span></span><span class="current"></span><span></span></div>
+    <div class="mascot" data-morph="robot">
+      <svg viewBox="0 0 64 64" focusable="false">
+        <path d="M32 22V13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        <circle cx="32" cy="9" r="4" fill="var(--robot)" stroke="currentColor" stroke-width="2.8"/>
+        <path d="M8 45c0-12 9-23 23-23 13 0 25 10 25 23 0 10-8 14-15 13-5-.7-7-2-11-1-4 1-6 3-12 2C11 58 8 52 8 45Z" fill="var(--robot)" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+        <g fill="currentColor"><circle cx="29" cy="38" r="2.4"/><circle cx="41" cy="38" r="2.4"/></g>
+        <path d="M29 46q3 4 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<section data-slide data-transition="fade" class="trial" aria-labelledby="title-5">
+  <div class="copy">
+    <p class="eyebrow">Evidence so far</p>
+    <h2 id="title-5">Keep checking the workflow.</h2>
+    <p class='lead'>I tried the new routing with synthetic cases and one small maintenance task.</p>
+    <p class='small'>The next test is a real ticket with enough risk to need independent review.</p>
+  </div>
+  <div class="journey" aria-hidden="true">
+    <div class="stops"><span></span><span></span><span></span><span></span><span class="current"></span></div>
+    <div class="mascot" data-morph="robot">
+      <svg viewBox="0 0 64 64" focusable="false">
+        <path d="M32 22V13" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+        <circle cx="32" cy="9" r="4" fill="var(--robot)" stroke="currentColor" stroke-width="2.8"/>
+        <path d="M8 45c0-12 9-23 23-23 13 0 25 10 25 23 0 10-8 14-15 13-5-.7-7-2-11-1-4 1-6 3-12 2C11 58 8 52 8 45Z" fill="var(--robot)" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/>
+        <g fill="currentColor"><path d="M24 40q3-5 6 0m6 0q3-5 6 0" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></g>
+        <path d="M29 46q3 4 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section></div>
+<footer data-controls hidden>
+  <nav data-jump aria-label="Jump to slide"></nav>
+  <button type="button" data-back>Back</button><button type="button" data-next>Next</button><button type="button" data-replay hidden>Replay</button>
+</footer>
+<div data-status role="status"></div>
+</main>
+</body>
+</html>

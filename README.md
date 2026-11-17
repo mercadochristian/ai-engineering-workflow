@@ -10,6 +10,9 @@ My focus is engineering judgment: defining the right problem, giving AI useful b
 
 Watch Lauren Tan’s talk, [“All Code Is Slop (Except Mine)”](https://www.youtube.com/watch?v=O_zcc6Xl12g), on YouTube.
 
+For the presenter-controlled version, open the [Deckframe source](docs/workflow-deck/index.html)
+in a browser from a local copy of this repository. Use the arrow keys to advance.
+
 Small tasks stay direct. Larger tasks use bounded ownership and one current record. AI helps investigate, draft, test, and review; I own the decisions and authorization.
 
 ## Explore

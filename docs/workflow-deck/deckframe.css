@@ -1,0 +1,57 @@
+/* Deckframe runtime styles. Deck themes can live in a separate stylesheet. */
+[data-deckframe] {
+  --df-aspect: 16 / 9;
+  --df-radius: 9px;
+}
+[data-deckframe] [hidden] { display: none !important; }
+[data-deckframe-ready] [data-stage] {
+  position: relative;
+  aspect-ratio: var(--df-aspect);
+  overflow: clip;
+  border-radius: var(--df-radius);
+}
+[data-deckframe-ready] [data-slide] {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  isolation: isolate;
+}
+[data-status] {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  overflow: clip;
+}
+
+:root[data-df-transition] { view-transition-name: none; }
+::view-transition { pointer-events: none; }
+:root[data-df-transition]::view-transition-group(*) {
+  animation-duration: 580ms;
+  animation-timing-function: cubic-bezier(.23, 1, .32, 1);
+}
+:root[data-df-transition]::view-transition-image-pair(df-scene) {
+  overflow: clip;
+  border-radius: var(--df-scene-radius);
+}
+:root[data-df-transition]::view-transition-group(df-scene) { animation-duration: 360ms; }
+:root[data-df-transition="slide"]::view-transition-old(df-scene),
+:root[data-df-transition="wipe"]::view-transition-old(df-scene) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+:root[data-df-transition="slide"]::view-transition-new(df-scene) {
+  animation: df-slide 360ms cubic-bezier(.77, 0, .175, 1) both;
+  mix-blend-mode: normal;
+}
+:root[data-df-transition="wipe"]::view-transition-new(df-scene) {
+  animation: df-wipe 360ms cubic-bezier(.77, 0, .175, 1) both;
+  mix-blend-mode: normal;
+}
+@keyframes df-slide {
+  from { transform: translateX(var(--df-slide-from, 100%)); }
+}
+@keyframes df-wipe {
+  from { clip-path: var(--df-wipe-from, inset(0 100% 0 0)); }
+  to { clip-path: inset(0); }
+}
