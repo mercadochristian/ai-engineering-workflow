@@ -6,12 +6,9 @@ I'm [Christian Mercado](https://github.com/mercadochristian), a software enginee
 
 My focus is engineering judgment: defining the right problem, giving AI useful boundaries, inspecting its output, and knowing what the evidence actually proves.
 
-<details>
-<summary>Watch how Lauren Tan’s talk shaped this workflow</summary>
-
 ![A small blob robot moves through five slides on how Lauren Tan’s talk shaped risk-based review, safeguards in code, and verification through real behavior.](assets/workflow-walkthrough.gif)
 
-</details>
+Watch Lauren Tan’s talk, [“All Code Is Slop (Except Mine)”](https://www.youtube.com/watch?v=O_zcc6Xl12g), on YouTube.
 
 Small tasks stay direct. Larger tasks use bounded ownership and one current record. AI helps investigate, draft, test, and review; I own the decisions and authorization.
 
